@@ -6,7 +6,6 @@
   --emailColor: #ababab;
 }
 .App {
-  /* height: 100%; */
   height: 100vh;
   width: 100vw;
   padding: 30px;
@@ -23,15 +22,12 @@
   width: 222px;
   height: 62px;
   opacity: 1;
-  /* width: 100%; */
-  /* display: flex;
-  justify-content: start; */
 }
 
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
 }
 
 .title-text {
@@ -63,7 +59,6 @@
 .formClass {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 40%;
@@ -74,7 +69,6 @@
 
 .emailBox {
   width: 100%;
-  /* height: 100%; */
   display: flex;
   justify-content: start;
   gap: 5px;
@@ -91,6 +85,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
+  cursor: pointer;
 }
 .emailBox input {
   width: 16rem;
@@ -100,86 +95,98 @@
 
   padding: 10px;
   border-radius: 10px;
-  color: #ababab;
 }
-
+.successMessage {
+  color: green;
+  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+}
+.errorMessage {
+  color: red;
+  font-weight: 300;
+  font-family: "Exo 2", sans-serif;
+}
 @media (max-width: 480px) {
   .App {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
   }
-  .formClass{
-    width: 100%;
+  .logo {
     margin: auto;
-
   }
   .cardContainer {
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    box-sizing: border-box;
+  }
+  .formClass {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+  }
+
+  .emailBox {
+    flex-direction: column;
+    position: absolute;
+    top: 185%;
+  }
+
+  .emailBox input,
+  .contact-button {
+    width: 90vw;
   }
 }
 
-@media (max-width: 720px) {
+@media (min-width: 480px) and (max-width: 720px) {
   .App {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .formClass{
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .formClass {
     width: 100%;
     margin: auto;
-
   }
-  .cardContainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    box-sizing: border-box;
+
+  .emailBox {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .emailBox input,
+  .contact-button {
+    width: 90%;
   }
 }
-@media (max-width: 1080px) {
+
+@media (min-width: 720px) and (max-width: 1080px) {
   .App {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .formClass{
-    width: 100%;
-    
-  }
   .cardContainer {
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-
-    box-sizing: border-box;
   }
-}
-
-@media (min-width: 2732px) {
-  .App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .formClass{
+  .formClass {
     width: 100%;
+    margin: 0 auto;
   }
-  .cardContainer {
-    width:100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 
-    box-sizing: border-box;
+  .emailBox {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .emailBox input,
+  .contact-button {
+    width: 100%;
   }
 }
