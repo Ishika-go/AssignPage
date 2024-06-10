@@ -80,21 +80,21 @@ function App() {
   return (
     <div className="App">
       <div className="formClass">
-      <div className = "logo">
-<img src = {Logo} />
+     
+<img className = "logo" src = {Logo} />
+     
+     <div className = "title-text">
+      <p >Suite Of Business Support Services</p>
      </div>
-     <div className = "title">
-      <p>Suite Of Business Support Services</p>
-     </div>
-     <div className = "subtitle">
+     <div className = "subtitle-text">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
      </div>
      <div className = "emailBox">
       <form onSubmit={handleSubmit}>
-      <input value = {formData.email} type='email' onChange = {handleChange} required/>
+      <input value = {formData.email} type='email' onChange = {handleChange} placeholder="Email Address" required/>
       {formData.error && <div className="error">{formData.error}</div>}
       {formData.successMessage && <div className="success">{formData.successMessage}</div>}
-      <button className = "submit-button" type='submit'>Submit</button>
+      <button className = "contact-button" type='submit'>Contact me</button>
       </form>
      
      </div>
